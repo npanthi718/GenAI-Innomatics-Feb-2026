@@ -17,9 +17,9 @@ Welcome to my central repository for the **Advanced GenAI Internship**. This spa
 
 | Folder | Description | Status |
 | :--- | :--- | :--- |
-| [**`📁 Assignments/`**](./Assignments) | Weekly coding tasks and logic building exercises. | Active |
-| [**`📁 Test-Reports/`**](./Test-Reports) | Evaluation results, hackathon reports, and quiz scores. | Active |
-| [**`📁 Projects/`**](./Projects) | End-to-end LLM applications, RAG pipelines, and deployments. | Upcoming |
+| [**`📁 Agentic AI Assignment/`**](/Agentic%20AI%20Assignment) | Weekly coding tasks and logic building exercises. | Active |
+| [**`📁 Test-Reports/`**](/Test-Reports) | Evaluation results, hackathon reports, and quiz scores. | Active |
+| [**`📁 Agentic AI Projects/`**](/Agentic%20AI%20Projects) | End-to-end LLM applications, RAG pipelines, and deployments. | Upcoming |
 
 ---
 
@@ -29,17 +29,6 @@ Welcome to my central repository for the **Advanced GenAI Internship**. This spa
 ![LangChain](https://img.shields.io/badge/LangChain-🦜-green?style=for-the-badge)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-
----
-
-## 📝 Recent Assignments (Logic Building - Task 1)
-In the initial phase, I've completed core logic building tasks to sharpen my Python fundamentals:
-
-1.  **User Login Check:** Standard authentication logic implementation.
-2.  **Pass / Fail Analyzer:** Iterative data processing for academic grading.
-3.  **Simple Data Cleaner:** String normalization and preprocessing.
-4.  **Message Length Analyzer:** Text filtering based on character constraints.
-5.  **Error Message Detector:** System log monitoring and categorization.
 
 ---
 
