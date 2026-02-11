@@ -1,0 +1,58 @@
+# 🚀 Advanced Generative AI Internship 
+### **Innomatics Research Labs | February 2026 Cohort**
+
+Welcome to my central repository for the **Advanced GenAI Internship**. This space serves as a comprehensive record of my journey, documenting the logic, code, and research I've developed over the 3-month program.
+
+---
+
+## 👨‍💻 Intern Profile
+* **Name:** Sushil Panthi
+* **Role:** GenAI Intern
+* **Background:** Full Stack Developer (MERN)
+* **Portfolio:** [sushilpanthi.com](https://www.sushilpanthi.com)
+
+---
+
+## 📂 Repository Structure
+
+| Folder | Description | Status |
+| :--- | :--- | :--- |
+| [**`📁 Assignments/`**](./Assignments) | Weekly coding tasks and logic building exercises. | Active |
+| [**`📁 Test-Reports/`**](./Test-Reports) | Evaluation results, hackathon reports, and quiz scores. | Active |
+| [**`📁 Projects/`**](./Projects) | End-to-end LLM applications, RAG pipelines, and deployments. | Upcoming |
+
+---
+
+## 🛠️ Tech Stack & Skills
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![GenAI](https://img.shields.io/badge/Generative_AI-AI-blueviolet?style=for-the-badge)
+![LangChain](https://img.shields.io/badge/LangChain-🦜-green?style=for-the-badge)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+
+---
+
+## 📝 Recent Assignments (Logic Building - Task 1)
+In the initial phase, I've completed core logic building tasks to sharpen my Python fundamentals:
+
+1.  **User Login Check:** Standard authentication logic implementation.
+2.  **Pass / Fail Analyzer:** Iterative data processing for academic grading.
+3.  **Simple Data Cleaner:** String normalization and preprocessing.
+4.  **Message Length Analyzer:** Text filtering based on character constraints.
+5.  **Error Message Detector:** System log monitoring and categorization.
+
+---
+
+## 📊 Internship Progress Tracker
+- [x] **Month 1:** Python Fundamentals & Data Wrangling
+- [ ] **Month 2:** LLM Orchestration & RAG Pipelines
+- [ ] **Month 3:** Production-Grade AI Deployment & Final Project
+
+---
+
+## 🤝 Connect with Me
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sushilpanthi/)
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/npanthi718)
+
+---
+> "Building the future of intelligence, one token at a time." ✨
