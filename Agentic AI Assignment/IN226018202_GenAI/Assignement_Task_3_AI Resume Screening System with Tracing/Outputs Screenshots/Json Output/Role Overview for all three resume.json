@@ -1,0 +1,26 @@
+{
+  "inputs": {
+    "job_description": "Role Overview:\nWe are looking for a highly skilled Senior Data Scientist/AI Engineer to lead the development of our next-generation Generative AI platform. The candidate must be an expert in building production-ready NLP pipelines and LLM-based solutions.Key Requirements (Core Evaluation Criteria):Experience: Minimum 4+ years of industry experience in Data Science and Machine Learning.AI/LLM Stack: Advanced proficiency in LangChain, RAG (Retrieval-Augmented Generation), and LLM Fine-tuning.Tracing & Monitoring: Hands-on experience using LangSmith for debugging, tracing, and monitoring production pipelines.Engineering Skills: Deep knowledge of Python, ETL pipeline design, FastAPI, and Docker for containerization.Cloud & MLOps: Experience deploying models on AWS (SageMaker) or GCP (Vertex AI).Academic Background: Master’s degree (M.Tech/M.S.) in Data Science, AI, or Computer Science from a reputable institution."
+  },
+  "outputs": {
+    "output": "## Role Overview\n- Job Title: Senior Data Scientist/AI Engineer\n- Seniority: Senior\n- Experience Required: 4+ years\n\n## Core Requirements\n- Must-Have Skills: Advanced proficiency in LangChain, RAG, LLM Fine-tuning, Python, ETL pipeline design, FastAPI, Docker, and experience with AWS (SageMaker) or GCP (Vertex AI)\n- Nice-to-Have Skills: Not mentioned\n- Tools/Platforms: LangChain, RAG, LangSmith, FastAPI, Docker, AWS (SageMaker), GCP (Vertex AI)\n\n## Responsibilities\n- Lead the development of a next-generation Generative AI platform\n- Build production-ready NLP pipelines\n- Develop LLM-based solutions\n- Design and deploy ETL pipelines\n- Deploy models on cloud platforms (AWS or GCP)\n- Use LangSmith for debugging, tracing, and monitoring production pipelines\n- Containerize applications using Docker\n\n## Evaluation Priorities\n- Advanced proficiency in LangChain, RAG, and LLM Fine-tuning\n- Hands-on experience with LangSmith for debugging, tracing, and monitoring\n- Deep knowledge of Python, ETL pipeline design, FastAPI, and Docker\n- Experience deploying models on AWS (SageMaker) or GCP (Vertex AI)\n- Minimum 4+ years of industry experience in Data Science and Machine Learning"
+  },
+  "metadata": {
+    "ls_run_depth": 0,
+    "revision_id": "5b6ec6c"
+  },
+  "langsmith": {
+    "organization": {
+      "name": "Personal",
+      "id": "14514654-322c-4fe5-816e-510f933ae926"
+    },
+    "workspace": {
+      "name": "Workspace 1",
+      "id": "c1a20fdb-7731-42c9-92bc-ba717126fa63"
+    },
+    "tracing_project": {
+      "id": "47462b4c-7ffa-48c3-876e-f1abb4e6e92b",
+      "name": "Resume_Screener_Analysis"
+    }
+  }
+}

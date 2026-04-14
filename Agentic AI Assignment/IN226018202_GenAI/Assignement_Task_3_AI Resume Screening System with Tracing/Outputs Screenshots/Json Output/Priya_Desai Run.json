@@ -1,0 +1,26 @@
+{
+  "inputs": {
+    "resume_text": "Priya Desai\npriya.desai@email.com | +91-8765432109 | LinkedIn: linkedin.com/in/priya-desai\nPROFESSIONAL SUMMARY\nAspiring Data Scientist with 1.5 years of industry experience and a solid academic background in statistics and machine\nlearning. Comfortable with Python, basic NLP tasks, and data visualization. Looking to grow into LLM engineering and\nbuild production-level AI systems.\nTECHNICAL SKILLS\nProgramming: Python (Pandas, NumPy, Scikit-learn), SQL, basic R\nML / AI: Regression, Classification, Clustering, Basic NLP (TF-IDF, NLTK), introductory LLM usage\nVisualization: Matplotlib, Seaborn, Power BI (beginner)\nCloud: AWS S3 (basic), Google Colab\nWORK EXPERIENCE\nJunior Data Analyst | Syntel Solutions, Nagpur | Jan 2023 – Present\n Performed exploratory data analysis on customer sales data using Pandas and Matplotlib.\n Built a logistic regression model to predict customer churn with 78% accuracy.\n Created weekly performance dashboards in Power BI for the sales team.\n Assisted senior data scientists in data cleaning and feature engineering tasks.\nData Science Intern | TechMinds Pvt. Ltd., Nagpur | Jun 2022 – Dec 2022\n Explored sentiment classification using NLTK and Naive Bayes on product review datasets.\n Assisted in building a basic recommendation system using collaborative filtering.\nEDUCATION\nB.Sc. in Statistics & Computer Science – RTM Nagpur University (2022)\nTOOLS & TECHNOLOGIES\nPython, Jupyter Notebook, SQL, Git (basic), Power BI, Google Colab, NLTK, Scikit-learn\nCERTIFICATIONS\n Machine Learning by Andrew Ng – Coursera (2022)\n IBM Data Science Professional Certificate (2023)"
+  },
+  "outputs": {
+    "output": "## Candidate Snapshot\n- Name: Priya Desai\n- Current Role: Junior Data Analyst\n- Total Experience (if explicitly stated): 1.5 years\n\n## Skills\n- Technical Skills: Python, SQL, R, Machine Learning, Data Visualization\n- Tools/Platforms: Jupyter Notebook, Git, Power BI, Google Colab, AWS S3\n- Domains: Statistics, Machine Learning, Data Science\n\n## Education & Certifications\n- Education: B.Sc. in Statistics & Computer Science – RTM Nagpur University (2022)\n- Certifications: Machine Learning by Andrew Ng – Coursera (2022), IBM Data Science Professional Certificate (2023)\n\n## Key Evidence\n- Performed exploratory data analysis on customer sales data using Pandas and Matplotlib.\n- Built a logistic regression model to predict customer churn with 78% accuracy.\n- Explored sentiment classification using NLTK and Naive Bayes on product review datasets.\n- Assisted in building a basic recommendation system using collaborative filtering.\n- Completed certifications in Machine Learning and Data Science from Coursera and IBM respectively."
+  },
+  "metadata": {
+    "ls_run_depth": 0,
+    "revision_id": "5b6ec6c"
+  },
+  "langsmith": {
+    "organization": {
+      "name": "Personal",
+      "id": "14514654-322c-4fe5-816e-510f933ae926"
+    },
+    "workspace": {
+      "name": "Workspace 1",
+      "id": "c1a20fdb-7731-42c9-92bc-ba717126fa63"
+    },
+    "tracing_project": {
+      "id": "47462b4c-7ffa-48c3-876e-f1abb4e6e92b",
+      "name": "Resume_Screener_Analysis"
+    }
+  }
+}

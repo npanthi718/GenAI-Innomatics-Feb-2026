@@ -1,0 +1,26 @@
+{
+  "inputs": {
+    "resume_text": "Aryan Sharma\naryan.sharma@email.com | +91-9876543210 | LinkedIn: linkedin.com/in/aryan-sharma | GitHub: github.com/aryan-ds\nPROFESSIONAL SUMMARY\nResults-driven Data Scientist with 4+ years of experience designing and deploying ML/NLP pipelines at scale. Proficient\nin Python, LangChain, and cloud platforms. Proven track record of delivering end-to-end AI solutions that reduce\noperational costs and improve business outcomes. Strong communicator with experience collaborating across\ncross-functional teams.\nTECHNICAL SKILLS\nProgramming: Python (NumPy, Pandas, Scikit-learn, PyTorch, TensorFlow), SQL, R\nML / AI: Supervised & Unsupervised Learning, NLP, LLMs, RAG, Fine-tuning, LangChain, LangSmith\nData Engineering: Apache Spark, Airflow, dbt, ETL pipeline design\nVisualization: Power BI, Tableau, Matplotlib, Seaborn, Plotly\nCloud: AWS (SageMaker, S3, Lambda), GCP (BigQuery, Vertex AI), Azure ML\nWORK EXPERIENCE\nSenior Data Scientist | Infosys AI Labs, Pune | Jun 2022 – Present\n Built an LLM-based document intelligence platform using LangChain + OpenAI GPT-4, reducing manual review time by 65%.\n Designed modular RAG pipelines with LangSmith tracing for production monitoring and debugging.\n Trained a custom NER model on 200K+ resumes achieving 91% F1-score for skill extraction.\n Led a team of 4 data scientists; mentored juniors on MLOps best practices and CI/CD workflows.\n Deployed Airflow-orchestrated ML pipelines on AWS SageMaker serving 2M+ predictions/month.\nData Scientist | Wipro Analytics, Bangalore | Aug 2020 – May 2022\n Developed churn prediction model (XGBoost) achieving AUC-ROC of 0.93 for a telecom client.\n Built real-time sentiment analysis system using BERT, deployed via FastAPI + Docker on GCP.\n Automated EDA and reporting pipelines saving ~12 hrs/week for business stakeholders.\nEDUCATION\nM.Tech in Data Science & AI – IIT Bombay (2020)\nB.E. in Computer Engineering – Pune University (2018)\nTOOLS & TECHNOLOGIES\nLangChain, LangSmith, OpenAI API, HuggingFace, Docker, Kubernetes, MLflow, FastAPI, Git, Jupyter, VS Code,\nPostman\nCERTIFICATIONS\n AWS Certified Machine Learning – Specialty (2023)\n Google Professional Data Engineer (2022)\n Deep Learning Specialization – Coursera / DeepLearning.AI (2021)"
+  },
+  "outputs": {
+    "output": "## Candidate Snapshot\n- Name: Aryan Sharma\n- Current Role: Senior Data Scientist\n- Total Experience (if explicitly stated): 4+ years\n\n## Skills\n- Technical Skills: Python, SQL, R, ML/AI, Data Engineering, Visualization\n- Tools/Platforms: LangChain, LangSmith, OpenAI API, HuggingFace, Docker, Kubernetes, MLflow, FastAPI, Git, Jupyter, VS Code, Postman, AWS, GCP, Azure ML\n- Domains: Not mentioned\n\n## Education & Certifications\n- Education: M.Tech in Data Science & AI – IIT Bombay (2020), B.E. in Computer Engineering – Pune University (2018)\n- Certifications: AWS Certified Machine Learning – Specialty (2023), Google Professional Data Engineer (2022), Deep Learning Specialization – Coursera / DeepLearning.AI (2021)\n\n## Key Evidence\n- Built an LLM-based document intelligence platform using LangChain + OpenAI GPT-4, reducing manual review time by 65%.\n- Designed modular RAG pipelines with LangSmith tracing for production monitoring and debugging.\n- Trained a custom NER model on 200K+ resumes achieving 91% F1-score for skill extraction.\n- Deployed Airflow-orchestrated ML pipelines on AWS SageMaker serving 2M+ predictions/month.\n- Developed churn prediction model (XGBoost) achieving AUC-ROC of 0.93 for a telecom client."
+  },
+  "metadata": {
+    "ls_run_depth": 0,
+    "revision_id": "5b6ec6c"
+  },
+  "langsmith": {
+    "organization": {
+      "name": "Personal",
+      "id": "14514654-322c-4fe5-816e-510f933ae926"
+    },
+    "workspace": {
+      "name": "Workspace 1",
+      "id": "c1a20fdb-7731-42c9-92bc-ba717126fa63"
+    },
+    "tracing_project": {
+      "id": "47462b4c-7ffa-48c3-876e-f1abb4e6e92b",
+      "name": "Resume_Screener_Analysis"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "inputs": {
+    "resume_text": "Rahul Patil\nrahul.patil123@gmail.com | +91-7654321098\nPROFESSIONAL SUMMARY\nRecent graduate with a Bachelor's degree in Commerce who has completed a short online course in data analytics.\nFamiliar with Excel and basic Python. Enthusiastic about entering the data science field and willing to learn new\ntechnologies.\nTECHNICAL SKILLS\nProgramming: Python (very basic – print, loops, lists), Excel (VLOOKUP, pivot tables)\nData Tools: Google Sheets, MS Excel\nOthers: Basic internet research, report writing in MS Word\nWORK EXPERIENCE\nAccounts Assistant | Patil & Associates, Aurangabad | Jul 2023 – Present\n Maintained daily accounts and ledgers using Tally and MS Excel.\n Prepared monthly financial reports for the management team.\n Handled data entry of invoices and purchase orders.\nEDUCATION\nB.Com (Bachelor of Commerce) – Dr. Babasaheb Ambedkar Marathwada University (2023)\nTOOLS & TECHNOLOGIES\nMS Excel, Tally ERP, Google Sheets, MS Word, Python (beginner)\nCERTIFICATIONS\n Data Analytics Fundamentals – NPTEL (30 hrs online course, 2023)"
+  },
+  "outputs": {
+    "output": "## Candidate Snapshot\n- Name: Rahul Patil\n- Current Role: Accounts Assistant\n- Total Experience (if explicitly stated): Not mentioned\n\n## Skills\n- Technical Skills: Python, Excel\n- Tools/Platforms: Google Sheets, MS Excel, Tally ERP, MS Word\n- Domains: Not mentioned\n\n## Education & Certifications\n- Education: B.Com (Bachelor of Commerce) – Dr. Babasaheb Ambedkar Marathwada University (2023)\n- Certifications: Data Analytics Fundamentals – NPTEL (30 hrs online course, 2023)\n\n## Key Evidence\n- Recent graduate with a Bachelor's degree in Commerce who has completed a short online course in data analytics.\n- Familiar with Excel and basic Python.\n- Maintained daily accounts and ledgers using Tally and MS Excel.\n- Prepared monthly financial reports for the management team.\n- Completed a 30-hour online course in Data Analytics Fundamentals from NPTEL in 2023."
+  },
+  "metadata": {
+    "ls_run_depth": 0,
+    "revision_id": "5b6ec6c"
+  },
+  "langsmith": {
+    "organization": {
+      "name": "Personal",
+      "id": "14514654-322c-4fe5-816e-510f933ae926"
+    },
+    "workspace": {
+      "name": "Workspace 1",
+      "id": "c1a20fdb-7731-42c9-92bc-ba717126fa63"
+    },
+    "tracing_project": {
+      "id": "47462b4c-7ffa-48c3-876e-f1abb4e6e92b",
+      "name": "Resume_Screener_Analysis"
+    }
+  }
+}

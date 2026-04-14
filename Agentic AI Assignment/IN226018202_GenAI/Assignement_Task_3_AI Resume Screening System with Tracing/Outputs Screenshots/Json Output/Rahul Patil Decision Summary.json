@@ -1,0 +1,27 @@
+{
+  "inputs": {
+    "extracted_data": "## Candidate Snapshot\n- Name: Rahul Patil\n- Current Role: Accounts Assistant\n- Total Experience (if explicitly stated): Not mentioned\n\n## Skills\n- Technical Skills: Python, Excel\n- Tools/Platforms: Google Sheets, MS Excel, Tally ERP, MS Word\n- Domains: Not mentioned\n\n## Education & Certifications\n- Education: B.Com (Bachelor of Commerce) – Dr. Babasaheb Ambedkar Marathwada University (2023)\n- Certifications: Data Analytics Fundamentals – NPTEL (30 hrs online course, 2023)\n\n## Key Evidence\n- Recent graduate with a Bachelor's degree in Commerce who has completed a short online course in data analytics.\n- Familiar with Excel and basic Python.\n- Maintained daily accounts and ledgers using Tally and MS Excel.\n- Prepared monthly financial reports for the management team.\n- Completed a 30-hour online course in Data Analytics Fundamentals from NPTEL in 2023.",
+    "job_description": "## Role Overview\n- Job Title: Senior Data Scientist/AI Engineer\n- Seniority: Senior\n- Experience Required: 4+ years\n\n## Core Requirements\n- Must-Have Skills: Advanced proficiency in LangChain, RAG, LLM Fine-tuning, Python, ETL pipeline design, FastAPI, Docker, and experience with AWS (SageMaker) or GCP (Vertex AI)\n- Nice-to-Have Skills: Not mentioned\n- Tools/Platforms: LangSmith, LangChain, RAG, FastAPI, Docker, AWS (SageMaker), GCP (Vertex AI)\n\n## Responsibilities\n- Lead the development of a next-generation Generative AI platform\n- Build production-ready NLP pipelines\n- Develop LLM-based solutions\n- Design and deploy ETL pipelines\n- Deploy models on cloud platforms (AWS or GCP)\n- Use LangSmith for debugging, tracing, and monitoring production pipelines\n- Containerize applications using Docker\n\n## Evaluation Priorities\n- Advanced proficiency in LangChain, RAG, and LLM Fine-tuning\n- Hands-on experience with LangSmith for debugging, tracing, and monitoring\n- Deep knowledge of Python, ETL pipeline design, FastAPI, and Docker\n- Experience deploying models on AWS (SageMaker) or GCP (Vertex AI)\n- Master’s degree in Data Science, AI, or Computer Science from a reputable institution"
+  },
+  "outputs": {
+    "output": "## Decision Summary\n- Recommendation: Low Fit\n- Fit Score: 12/100\n\n## Score Breakdown\n- Skill Match (0-40): 4 - The candidate has basic Python skills but lacks advanced proficiency in required skills like LangChain, RAG, LLM Fine-tuning, ETL pipeline design, FastAPI, and Docker.\n- Experience Relevance (0-40): 4 - The candidate's experience as an Accounts Assistant does not align with the senior data scientist role, and there is no mention of relevant experience in data science or AI.\n- Tool/Platform Alignment (0-20): 4 - The candidate has experience with MS Excel and Google Sheets, but not with the required tools like LangSmith, LangChain, RAG, FastAPI, Docker, AWS (SageMaker), or GCP (Vertex AI).\n\n## Matched Strengths\n- Basic Python skills\n- Familiarity with Excel and Google Sheets\n- Completed a short online course in Data Analytics Fundamentals\n- Experience with maintaining daily accounts and ledgers\n- Prepared monthly financial reports for the management team\n\n## Missing or Weak Areas\n- Lack of advanced proficiency in LangChain, RAG, and LLM Fine-tuning\n- No experience with LangSmith, FastAPI, Docker, AWS (SageMaker), or GCP (Vertex AI)\n- Limited experience in data science or AI\n- No master's degree in Data Science, AI, or Computer Science\n- Insufficient experience in building production-ready NLP pipelines or deploying models on cloud platforms\n\n## Interview Focus Areas\n- Can you explain your understanding of LangChain, RAG, and LLM Fine-tuning, and how you would apply them in a real-world scenario?\n- How would you design and deploy an ETL pipeline using FastAPI and Docker?\n- What experience do you have with cloud platforms like AWS (SageMaker) or GCP (Vertex AI), and how would you deploy models on these platforms?"
+  },
+  "metadata": {
+    "ls_run_depth": 0,
+    "revision_id": "5b6ec6c"
+  },
+  "langsmith": {
+    "organization": {
+      "name": "Personal",
+      "id": "14514654-322c-4fe5-816e-510f933ae926"
+    },
+    "workspace": {
+      "name": "Workspace 1",
+      "id": "c1a20fdb-7731-42c9-92bc-ba717126fa63"
+    },
+    "tracing_project": {
+      "id": "47462b4c-7ffa-48c3-876e-f1abb4e6e92b",
+      "name": "Resume_Screener_Analysis"
+    }
+  }
+}

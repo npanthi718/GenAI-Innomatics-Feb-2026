@@ -1,0 +1,27 @@
+{
+  "inputs": {
+    "extracted_data": "## Candidate Snapshot\n- Name: Aryan Sharma\n- Current Role: Senior Data Scientist\n- Total Experience (if explicitly stated): 4+ years\n\n## Skills\n- Technical Skills: Python, SQL, R, ML/AI, Data Engineering, Visualization\n- Tools/Platforms: LangChain, LangSmith, OpenAI API, HuggingFace, Docker, Kubernetes, MLflow, FastAPI, Git, Jupyter, VS Code, Postman, AWS, GCP, Azure ML\n- Domains: Not mentioned\n\n## Education & Certifications\n- Education: M.Tech in Data Science & AI – IIT Bombay (2020), B.E. in Computer Engineering – Pune University (2018)\n- Certifications: AWS Certified Machine Learning – Specialty (2023), Google Professional Data Engineer (2022), Deep Learning Specialization – Coursera / DeepLearning.AI (2021)\n\n## Key Evidence\n- Built an LLM-based document intelligence platform using LangChain + OpenAI GPT-4, reducing manual review time by 65%.\n- Designed modular RAG pipelines with LangSmith tracing for production monitoring and debugging.\n- Trained a custom NER model on 200K+ resumes achieving 91% F1-score for skill extraction.\n- Deployed Airflow-orchestrated ML pipelines on AWS SageMaker serving 2M+ predictions/month.\n- Developed churn prediction model (XGBoost) achieving AUC-ROC of 0.93 for a telecom client.",
+    "job_description": "## Role Overview\n- Job Title: Senior Data Scientist/AI Engineer\n- Seniority: Senior\n- Experience Required: 4+ years\n\n## Core Requirements\n- Must-Have Skills: Advanced proficiency in LangChain, RAG, LLM Fine-tuning, Python, ETL pipeline design, FastAPI, Docker, and experience with AWS (SageMaker) or GCP (Vertex AI)\n- Nice-to-Have Skills: Not mentioned\n- Tools/Platforms: LangSmith, LangChain, RAG, FastAPI, Docker, AWS (SageMaker), GCP (Vertex AI)\n\n## Responsibilities\n- Lead the development of a next-generation Generative AI platform\n- Build production-ready NLP pipelines\n- Develop LLM-based solutions\n- Design and deploy ETL pipelines\n- Deploy models on cloud platforms (AWS or GCP)\n- Debug, trace, and monitor production pipelines using LangSmith\n- Containerize applications using Docker\n\n## Evaluation Priorities\n- Minimum 4+ years of industry experience in Data Science and Machine Learning\n- Advanced proficiency in LangChain, RAG, and LLM Fine-tuning\n- Hands-on experience with LangSmith for debugging, tracing, and monitoring\n- Deep knowledge of Python, ETL pipeline design, FastAPI, and Docker\n- Experience deploying models on AWS (SageMaker) or GCP (Vertex AI)"
+  },
+  "outputs": {
+    "output": "## Decision Summary\n- Recommendation: Strong Fit\n- Fit Score: 92/100\n\n## Score Breakdown\n- Skill Match (0-40): 38\n  - Aryan Sharma has advanced proficiency in LangChain, Python, and experience with AWS, which are must-have skills for the role.\n- Experience Relevance (0-40): 38\n  - With 4+ years of experience in Data Science and Machine Learning, Aryan meets the minimum experience requirement.\n- Tool/Platform Alignment (0-20): 16\n  - Aryan has hands-on experience with LangSmith, LangChain, FastAPI, Docker, and AWS, which are required tools and platforms for the role.\n\n## Matched Strengths\n- Advanced proficiency in LangChain, Python, and experience with AWS\n- Hands-on experience with LangSmith for debugging, tracing, and monitoring\n- Deep knowledge of Python, ETL pipeline design, and Docker\n- Experience deploying models on AWS (SageMaker)\n- Strong educational background in Data Science and AI\n\n## Missing or Weak Areas\n- Limited information about experience with GCP (Vertex AI)\n- No explicit mention of RAG pipeline design experience, although Aryan has experience with LangSmith and LangChain\n- No information about experience with containerization using Docker in a production environment\n\n## Interview Focus Areas\n- Can you walk us through your experience with RAG pipeline design and how you've applied it in previous projects?\n- How do you approach debugging and monitoring production pipelines using LangSmith, and what tools do you use?\n- How do you stay up-to-date with the latest developments in Generative AI, and can you give an example of a recent project where you applied this knowledge?"
+  },
+  "metadata": {
+    "ls_run_depth": 0,
+    "revision_id": "5b6ec6c"
+  },
+  "langsmith": {
+    "organization": {
+      "name": "Personal",
+      "id": "14514654-322c-4fe5-816e-510f933ae926"
+    },
+    "workspace": {
+      "name": "Workspace 1",
+      "id": "c1a20fdb-7731-42c9-92bc-ba717126fa63"
+    },
+    "tracing_project": {
+      "id": "47462b4c-7ffa-48c3-876e-f1abb4e6e92b",
+      "name": "Resume_Screener_Analysis"
+    }
+  }
+}

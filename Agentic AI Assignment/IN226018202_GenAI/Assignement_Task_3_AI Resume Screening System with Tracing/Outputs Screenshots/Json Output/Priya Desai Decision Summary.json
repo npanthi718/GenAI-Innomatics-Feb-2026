@@ -1,0 +1,27 @@
+{
+  "inputs": {
+    "extracted_data": "## Candidate Snapshot\n- Name: Priya Desai\n- Current Role: Junior Data Analyst\n- Total Experience (if explicitly stated): 1.5 years\n\n## Skills\n- Technical Skills: Python, SQL, R, Machine Learning, Data Visualization\n- Tools/Platforms: Jupyter Notebook, Git, Power BI, Google Colab, AWS S3\n- Domains: Statistics, Machine Learning, Data Science\n\n## Education & Certifications\n- Education: B.Sc. in Statistics & Computer Science – RTM Nagpur University (2022)\n- Certifications: Machine Learning by Andrew Ng – Coursera (2022), IBM Data Science Professional Certificate (2023)\n\n## Key Evidence\n- Performed exploratory data analysis on customer sales data using Pandas and Matplotlib.\n- Built a logistic regression model to predict customer churn with 78% accuracy.\n- Explored sentiment classification using NLTK and Naive Bayes on product review datasets.\n- Assisted in building a basic recommendation system using collaborative filtering.\n- Completed certifications in Machine Learning and Data Science from Coursera and IBM respectively.",
+    "job_description": "## Role Overview\n- Job Title: Senior Data Scientist/AI Engineer\n- Seniority: Senior\n- Experience Required: 4+ years\n\n## Core Requirements\n- Must-Have Skills: Advanced proficiency in LangChain, RAG, LLM Fine-tuning, Python, ETL pipeline design, FastAPI, Docker, and experience with AWS (SageMaker) or GCP (Vertex AI)\n- Nice-to-Have Skills: Not mentioned\n- Tools/Platforms: LangSmith, LangChain, RAG, FastAPI, Docker, AWS (SageMaker), GCP (Vertex AI)\n\n## Responsibilities\n- Lead the development of a next-generation Generative AI platform\n- Build production-ready NLP pipelines\n- Develop LLM-based solutions\n- Design and deploy ETL pipelines\n- Deploy models on cloud platforms (AWS or GCP)\n- Debug, trace, and monitor production pipelines using LangSmith\n- Containerize applications using Docker\n\n## Evaluation Priorities\n- Advanced proficiency in LangChain, RAG, and LLM Fine-tuning\n- Hands-on experience with LangSmith for debugging, tracing, and monitoring\n- Deep knowledge of Python, ETL pipeline design, FastAPI, and Docker\n- Experience deploying models on AWS (SageMaker) or GCP (Vertex AI)\n- Minimum 4+ years of industry experience in Data Science and Machine Learning"
+  },
+  "outputs": {
+    "output": "## Decision Summary\n- Recommendation: Low Fit\n- Fit Score: 22/100\n\n## Score Breakdown\n- Skill Match (0-40): 10\n  - The candidate lacks advanced proficiency in required skills such as LangChain, RAG, LLM Fine-tuning, ETL pipeline design, FastAPI, and Docker.\n- Experience Relevance (0-40): 8\n  - The candidate has only 1.5 years of experience, which is significantly less than the required 4+ years of industry experience.\n- Tool/Platform Alignment (0-20): 4\n  - The candidate has experience with AWS S3 but lacks experience with other required tools and platforms such as LangSmith, LangChain, RAG, FastAPI, Docker, and AWS SageMaker.\n\n## Matched Strengths\n- Proficient in Python, a required skill for the role.\n- Experience with data analysis and machine learning using tools like Pandas, Matplotlib, and scikit-learn.\n- Completed certifications in Machine Learning and Data Science from reputable institutions.\n- Familiarity with cloud platforms like AWS.\n- Basic understanding of data science concepts and techniques.\n\n## Missing or Weak Areas\n- Lack of experience with LangChain, RAG, and LLM Fine-tuning.\n- No experience with ETL pipeline design, FastAPI, and Docker.\n- Limited experience with cloud platforms, specifically with AWS SageMaker or GCP Vertex AI.\n- Insufficient experience in leading the development of large-scale AI projects.\n- No experience with containerization using Docker.\n- Limited knowledge of production-ready NLP pipelines and deployment.\n\n## Interview Focus Areas\n- Can you explain your understanding of LangChain and RAG, and how you would approach learning these technologies?\n- How would you design and deploy an ETL pipeline using FastAPI and Docker?\n- Can you walk us through your experience with cloud platforms, specifically with deploying models on AWS SageMaker or GCP Vertex AI?\n- How do you stay up-to-date with the latest advancements in machine learning and AI, and can you give an example of a recent project you worked on?\n- Can you describe your experience with team leadership and project management in a data science context?"
+  },
+  "metadata": {
+    "ls_run_depth": 0,
+    "revision_id": "5b6ec6c"
+  },
+  "langsmith": {
+    "organization": {
+      "name": "Personal",
+      "id": "14514654-322c-4fe5-816e-510f933ae926"
+    },
+    "workspace": {
+      "name": "Workspace 1",
+      "id": "c1a20fdb-7731-42c9-92bc-ba717126fa63"
+    },
+    "tracing_project": {
+      "id": "47462b4c-7ffa-48c3-876e-f1abb4e6e92b",
+      "name": "Resume_Screener_Analysis"
+    }
+  }
+}
