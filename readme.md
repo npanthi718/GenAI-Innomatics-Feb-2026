@@ -38,8 +38,9 @@ Welcome to my central repository for the **Advanced GenAI Internship**. This spa
 ## 📊 Internship Progress Tracker
 
 - [x] **Month 1:** Python Fundamentals & FAST API
-- [ ] **Month 2:** Comming Soon...............
-- [ ] **Month 3:** Comming Soon................
+- [x] **Month 2:** Natural Language Processing & Generative AI
+- [x] **Month 3:** Retrieval-Augmented Generation(RAG) & more comming soon......................
+
 ---
 
 ## 🤝 Connect with Me
