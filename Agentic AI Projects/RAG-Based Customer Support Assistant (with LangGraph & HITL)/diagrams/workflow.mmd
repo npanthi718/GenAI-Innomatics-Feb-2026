@@ -1,0 +1,9 @@
+flowchart TD
+    A[User Query] --> B[Retrieve Top K Chunks]
+    B --> C[Generate Grounded Draft]
+    C --> D[Score Confidence And Risk]
+    D -->|Low risk, good confidence| E[Finalize Answer]
+    D -->|High risk or low confidence| F[Human Review]
+    F --> G[Approve Or Edit]
+    G --> E
+    E --> H[Return Final Response]
