@@ -221,6 +221,9 @@ if st.session_state.last_result:
     if result["used_sources"]:
         st.caption("Sources: " + ", ".join(result["used_sources"]))
 
+    if result.get("reason"):
+        st.info(f"Escalation reason: {result['reason']}")
+
     if result["escalated_to_human"]:
         st.warning("This query was flagged for human review because the grounding score was low or the topic was sensitive.")
         edited = st.text_area("Human-approved response", value=result["answer"], height=150)

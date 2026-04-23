@@ -1,34 +1,26 @@
 # 💬 RAG-Based Customer Support Assistant
 
-Grounded customer support assistant built with **LangGraph**, **RAG**, and **human-in-the-loop review**. The app answers from your own support knowledge base, keeps risky cases under control, and gives you a clean demo experience in CLI, API, and Streamlit.
+A grounded customer support assistant built with **LangGraph**, **RAG**, and **human-in-the-loop review**. It answers from a local knowledge base, explains when it is unsure, and routes risky queries to a human review path.
 
 ## ✨ Highlights
 
 - 📚 Answers only from your knowledge base
-- 🧠 Uses LangGraph for a clear step-by-step workflow
-- 🛡️ Flags sensitive or low-confidence questions for human review
-- ⚡ Works with Groq by default, Gemini as a fallback option
+- 🧠 Uses LangGraph for a clear workflow
+- 🛡️ Flags low-confidence or sensitive questions for review
+- ⚡ Groq is the default model provider, Gemini is the fallback
 - 🖥️ Includes a polished Streamlit demo UI
-- 🔍 Shows sources used for the answer
+- 🔍 Shows the sources used for each answer
 
-## 🧩 How it works
-
-1. A user asks a support question.
-2. The assistant retrieves the most relevant document chunks.
-3. A grounded answer is generated from the retrieved context.
-4. The assistant scores the answer for confidence and risk.
-5. Risky cases are sent to human review before the final response.
-
-## 🧠 Tech Stack
+## 🧰 Tech Stack
 
 - LangGraph for orchestration
 - Groq or Gemini for generation
-- Lightweight hashing vectorization for local retrieval
-- Local file-based index for retrieval
+- ChromaDB-backed local vector store for retrieval
 - FastAPI for API access
 - Streamlit for the demo UI
+- Pydantic for request and response validation
 
-## 📁 Project Structure
+## 🗂 Project Structure
 
 ```text
 .
@@ -43,7 +35,7 @@ Grounded customer support assistant built with **LangGraph**, **RAG**, and **hum
 |-- README.md
 ```
 
-## 🚀 Quick Start
+## 🚀 Start Here
 
 Create and activate the environment:
 
@@ -53,15 +45,18 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-Create a `.env` file and set one provider:
+Create a `.env` file from `.env.example` and set your provider:
 
 ```text
 LLM_PROVIDER=groq
 GROQ_API_KEY=your_key_here
-GROQ_MODEL=llama-3.1-70b-versatile
+GROQ_MODEL=llama-3.3-70b-versatile
+LANGCHAIN_API_KEY=your_optional_langsmith_key
+LANGCHAIN_PROJECT=RAG-Based Customer Support Assistant
+LANGCHAIN_TRACING_V2=true
 ```
 
-Or use Gemini:
+If you prefer Gemini:
 
 ```text
 LLM_PROVIDER=gemini
@@ -71,19 +66,21 @@ GEMINI_MODEL=gemini-1.5-flash
 
 ## ▶ Run the Project
 
-Build the index from your knowledge base:
+Build or refresh the local knowledge index:
 
 ```powershell
 python -m src.ingest
 ```
 
-Run the Streamlit UI:
+This loads supported documents, splits them into chunks, creates embeddings, and stores them in ChromaDB.
+
+Launch the Streamlit app from the project root:
 
 ```powershell
 streamlit run src/app_streamlit.py
 ```
 
-If you are inside the `src` folder:
+If you are already inside `src`, this also works:
 
 ```powershell
 streamlit run app_streamlit.py
@@ -107,42 +104,59 @@ Run tests:
 pytest -q
 ```
 
-## 📚 Supported Knowledge Base Files
+## 📚 Knowledge Base Files
 
-Drop your support content into `data/knowledge_base/` using any of these formats:
+Put your support documents in `data/knowledge_base/`.
+
+Supported file types:
 
 - `.md`
 - `.txt`
 - `.pdf`
 
-The app will pick them up when you run ingestion or when retrieval auto-builds the local index.
+After adding or replacing files, run `python -m src.ingest` again.
 
-## 🎯 Good Demo Questions
+## 🎯 Demo Questions
 
-Try these in Streamlit:
+Try these during presentation:
 
 - How can I track my order?
 - How do I reset my password?
+- How long is a password reset link valid?
+- What is the standard delivery time for prepaid orders?
 - My prepaid order is delayed, what should I do?
+- I was charged twice. What details should I share?
 - I want to file legal action for billing fraud.
+- This looks like fraud. I need a chargeback now.
 
-## 🧪 What the demo shows
+## 🧠 How the Workflow Works
 
-- Grounded retrieval from your docs
-- Confidence and escalation handling
-- Human review for risky requests
-- Source visibility for transparency
+1. The user asks a question.
+2. The assistant retrieves relevant chunks from the local knowledge base.
+3. A grounded answer is drafted using only the retrieved context.
+4. The system scores confidence and risk.
+5. If the answer is low-confidence or sensitive, it is flagged for human review.
+6. The UI shows the answer, source list, and escalation reason.
 
 ## 🗺 Architecture
 
-The Mermaid source is in [diagrams/workflow.mmd](diagrams/workflow.mmd). Export it to PNG or SVG if you want to include it in a report or slide deck.
+The architecture diagram source is in [diagrams/workflow.mmd](diagrams/workflow.mmd). Export it to PNG or SVG if you want to place it in a report or slide deck.
+
+## 🧪 What to Check Before Demo
+
+- Ask one normal question and one risky question
+- Verify the assistant shows a reason when it escalates
+- Verify the button disables while processing
+- Verify sources are visible under the answer
+- Verify the API and CLI start without errors
 
 ## 🛠 Troubleshooting
 
-- If Streamlit cannot import the package, run it from the project root or use the command shown above.
-- If you add new knowledge documents, run `python -m src.ingest` once.
-- If a question is outside the knowledge base, the assistant will respond conservatively or escalate.
+- If Streamlit fails to import modules, start it from the project root.
+- If the assistant says the knowledge base is missing, run `python -m src.ingest`.
+- If Groq returns a decommissioned model error, update `.env` to `llama-3.3-70b-versatile` or switch to Gemini.
+- If you have LangSmith credentials, tracing will be enabled automatically.
 
 ## 🔒 Security Note
 
-Keep `.env` private. Never commit API keys to GitHub.
+Keep `.env` private. Never push API keys to GitHub.

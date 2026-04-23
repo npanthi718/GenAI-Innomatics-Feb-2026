@@ -8,9 +8,13 @@ from langgraph.graph import END, START, StateGraph
 from langgraph.types import Command, interrupt
 
 from src.config import settings
+from src.observability import setup_langsmith
 from src.model_provider import get_chat_model
-from src.prompts import SYSTEM_PROMPT
+from src.prompts import CONFIDENCE_PROMPT, SYSTEM_PROMPT
 from src.retriever import retrieve_chunks
+
+
+setup_langsmith()
 
 
 class GraphState(TypedDict, total=False):
@@ -82,6 +86,11 @@ def confidence_node(state: GraphState) -> GraphState:
     )
 
     needs_human = confidence < settings.confidence_threshold or risk == "high"
+    if risk == "high":
+        reason = f"High-risk query detected: {reason}"
+    elif needs_human:
+        reason = f"Confidence score below {settings.confidence_threshold:.2f}: {reason}"
+
     return {
         "confidence": confidence,
         "risk": risk,
@@ -152,6 +161,7 @@ class SupportAssistant:
                 "confidence": float(payload.get("confidence", 0.0)),
                 "escalated_to_human": True,
                 "used_sources": result.get("source_names", []),
+                "reason": str(payload.get("reason", "Human review required")),
                 "status": "needs_human",
             }
 
@@ -160,6 +170,7 @@ class SupportAssistant:
             "confidence": float(result.get("confidence", 0.0)),
             "escalated_to_human": bool(result.get("needs_human", False)),
             "used_sources": result.get("source_names", []),
+            "reason": str(result.get("reason", "")),
             "status": "needs_human" if result.get("needs_human", False) else "answered",
         }
 
@@ -173,6 +184,7 @@ class SupportAssistant:
                 "confidence": float(first.get("confidence", 0.0)),
                 "escalated_to_human": bool(first.get("needs_human", False)),
                 "used_sources": first.get("source_names", []),
+                "reason": str(first.get("reason", "")),
                 "status": "answered",
             }
 
@@ -196,5 +208,6 @@ class SupportAssistant:
             "confidence": float(final.get("confidence", 0.0)),
             "escalated_to_human": True,
             "used_sources": final.get("source_names", []),
+            "reason": str(final.get("reason", payload.get("reason", "Human review required"))),
             "status": "answered",
         }

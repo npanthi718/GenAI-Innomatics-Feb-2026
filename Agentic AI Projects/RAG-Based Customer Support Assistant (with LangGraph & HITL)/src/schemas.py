@@ -19,4 +19,5 @@ class QueryResponse(BaseModel):
     confidence: float
     escalated_to_human: bool
     used_sources: list[str]
+    reason: str | None = None
     status: Literal["answered", "needs_human"]
