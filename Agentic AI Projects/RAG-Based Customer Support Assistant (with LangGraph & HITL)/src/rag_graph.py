@@ -11,7 +11,7 @@ from src.config import settings
 from src.observability import setup_langsmith
 from src.model_provider import get_chat_model
 from src.prompts import CONFIDENCE_PROMPT, SYSTEM_PROMPT
-from src.retriever import retrieve_chunks
+from src.retriever import normalize_query, retrieve_chunks
 
 
 setup_langsmith()
@@ -19,6 +19,7 @@ setup_langsmith()
 
 class GraphState(TypedDict, total=False):
     query: str
+    normalized_query: str
     retrieved_context: str
     source_names: list[str]
     draft_answer: str
@@ -33,22 +34,36 @@ def _llm() -> Any:
     return get_chat_model()
 
 
+def _safe_text(value: Any, fallback: str = "") -> str:
+    if isinstance(value, str):
+        cleaned = value.strip()
+        return cleaned if cleaned else fallback
+    if value is None:
+        return fallback
+    cleaned = str(value).strip()
+    return cleaned if cleaned else fallback
+
+
 def retrieve_node(state: GraphState) -> GraphState:
-    docs = retrieve_chunks(state["query"])
+    normalized_query = normalize_query(state["query"])
+    docs = retrieve_chunks(normalized_query)
     context = "\n\n".join([d["text"] for d in docs])
     source_names = sorted({d.get("source", "unknown") for d in docs})
-    return {"retrieved_context": context, "source_names": source_names}
+    return {"normalized_query": normalized_query, "retrieved_context": context, "source_names": source_names}
 
 
 def answer_node(state: GraphState) -> GraphState:
     model = _llm()
+    normalized_query = state.get("normalized_query", state["query"])
     prompt = (
-        f"Customer query:\n{state['query']}\n\n"
+        f"Customer query (original):\n{state['query']}\n\n"
+        f"Customer query (normalized):\n{normalized_query}\n\n"
         f"Retrieved context:\n{state['retrieved_context']}\n\n"
-        "Write a support response using only the retrieved context."
+        "Write a support response using only the retrieved context. "
+        "If the query asks about delay, no movement, or late delivery, include delay-specific next steps from context."
     )
     msg = model.invoke([SystemMessage(content=SYSTEM_PROMPT), HumanMessage(content=prompt)])
-    return {"draft_answer": msg.content}
+    return {"draft_answer": _safe_text(msg.content, "I could not draft a grounded answer from the current context.")}
 
 
 def _risk_flags(query: str, context: str, draft_answer: str) -> tuple[float, Literal["low", "medium", "high"], str]:
@@ -155,9 +170,9 @@ class SupportAssistant:
 
         if "__interrupt__" in result:
             payload = result["__interrupt__"][0].value
-            draft_answer = payload.get("draft_answer", "")
+            draft_answer = _safe_text(payload.get("draft_answer"), "This question needs human review. Please provide a human-approved response.")
             return {
-                "answer": draft_answer or "This question needs human review. A draft answer was not generated.",
+                "answer": draft_answer,
                 "confidence": float(payload.get("confidence", 0.0)),
                 "escalated_to_human": True,
                 "used_sources": result.get("source_names", []),
@@ -165,8 +180,13 @@ class SupportAssistant:
                 "status": "needs_human",
             }
 
+        final_answer = _safe_text(
+            result.get("final_answer"),
+            _safe_text(result.get("draft_answer"), "I could not find a grounded answer. Please rephrase your question."),
+        )
+
         return {
-            "answer": result.get("final_answer", ""),
+            "answer": final_answer,
             "confidence": float(result.get("confidence", 0.0)),
             "escalated_to_human": bool(result.get("needs_human", False)),
             "used_sources": result.get("source_names", []),
@@ -179,8 +199,12 @@ class SupportAssistant:
         first = self.graph.invoke({"query": query}, config=config)
 
         if "__interrupt__" not in first:
+            final_answer = _safe_text(
+                first.get("final_answer"),
+                _safe_text(first.get("draft_answer"), "I could not find a grounded answer. Please rephrase your question."),
+            )
             return {
-                "answer": first.get("final_answer", ""),
+                "answer": final_answer,
                 "confidence": float(first.get("confidence", 0.0)),
                 "escalated_to_human": bool(first.get("needs_human", False)),
                 "used_sources": first.get("source_names", []),
@@ -191,20 +215,24 @@ class SupportAssistant:
         payload = first["__interrupt__"][0].value
         print("\n--- HUMAN REVIEW REQUIRED ---")
         print(f"Query: {payload['query']}")
-        print(f"Draft: {payload['draft_answer']}")
+        print(f"Draft: {_safe_text(payload.get('draft_answer'), 'No draft was generated. Please enter a human response.')}")
         print(f"Confidence: {payload['confidence']:.2f} | Risk: {payload['risk']} | Reason: {payload['reason']}")
 
         choice = input("Approve draft? (y/n): ").strip().lower()
         if choice == "y":
             edit = input("Optional edited response (enter to keep draft): ").strip()
-            decision = {"approved": True, "edited_answer": edit or payload["draft_answer"]}
+            decision = {"approved": True, "edited_answer": edit or _safe_text(payload.get("draft_answer"), "Human review completed.")}
         else:
             revised = input("Enter human-approved response: ").strip()
             decision = {"approved": True, "edited_answer": revised}
 
         final = self.graph.invoke(Command(resume=decision), config=config)
+        final_answer = _safe_text(
+            final.get("final_answer"),
+            _safe_text(payload.get("draft_answer"), "Escalated to human agent. Please wait for manual resolution."),
+        )
         return {
-            "answer": final.get("final_answer", ""),
+            "answer": final_answer,
             "confidence": float(final.get("confidence", 0.0)),
             "escalated_to_human": True,
             "used_sources": final.get("source_names", []),

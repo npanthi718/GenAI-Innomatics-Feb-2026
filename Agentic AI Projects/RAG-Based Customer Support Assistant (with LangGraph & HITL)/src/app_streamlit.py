@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 import sys
+from uuid import uuid4
 
 import streamlit as st
 
@@ -171,7 +172,7 @@ with col_left:
         st.session_state.status_note = "Thinking..."
         try:
             with st.spinner("Working on your answer..."):
-                result = assistant.ask(query.strip(), thread_id="streamlit-thread")
+                result = assistant.ask(query.strip(), thread_id=f"streamlit-{uuid4().hex}")
             st.session_state.last_result = result
             st.session_state.messages.append(("user", query.strip()))
             st.session_state.messages.append(("assistant", result["answer"]))

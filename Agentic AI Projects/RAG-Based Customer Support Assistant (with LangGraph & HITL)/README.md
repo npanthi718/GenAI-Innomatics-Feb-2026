@@ -98,10 +98,22 @@ Run the API:
 uvicorn src.app_api:app --reload
 ```
 
+Windows-safe alternative:
+
+```powershell
+.\.venv\Scripts\python.exe -m uvicorn src.app_api:app --reload
+```
+
 Run tests:
 
 ```powershell
 pytest -q
+```
+
+Windows-safe alternative:
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest -q
 ```
 
 ## 📚 Knowledge Base Files
@@ -156,6 +168,9 @@ The architecture diagram source is in [diagrams/workflow.mmd](diagrams/workflow.
 - If the assistant says the knowledge base is missing, run `python -m src.ingest`.
 - If Groq returns a decommissioned model error, update `.env` to `llama-3.3-70b-versatile` or switch to Gemini.
 - If you have LangSmith credentials, tracing will be enabled automatically.
+- If `python -m src.app_cli` behaves inconsistently, run with the project interpreter directly:
+  - `\.venv\Scripts\python.exe -m src.app_cli`
+  - `\.venv\Scripts\python.exe -m src.ingest`
 
 ## 🔒 Security Note
 

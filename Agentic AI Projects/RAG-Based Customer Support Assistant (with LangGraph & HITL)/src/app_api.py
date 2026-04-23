@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 import sys
+from uuid import uuid4
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
@@ -17,6 +18,15 @@ app = FastAPI(title="RAG Customer Support Assistant", version="1.0.0")
 assistant = SupportAssistant()
 
 
+@app.get("/")
+def root() -> dict[str, str]:
+    return {
+        "message": "RAG Customer Support Assistant API is running.",
+        "health": "/health",
+        "ask": "/ask",
+    }
+
+
 @app.get("/health")
 def health() -> dict[str, str]:
     return {"status": "ok"}
@@ -25,7 +35,7 @@ def health() -> dict[str, str]:
 @app.post("/ask", response_model=QueryResponse)
 def ask(req: QueryRequest) -> QueryResponse:
     try:
-        result = assistant.ask(req.query, thread_id="api-thread")
+        result = assistant.ask(req.query, thread_id=f"api-{uuid4().hex}")
         return QueryResponse(**result)
     except Exception as exc:
         raise HTTPException(status_code=500, detail=str(exc)) from exc

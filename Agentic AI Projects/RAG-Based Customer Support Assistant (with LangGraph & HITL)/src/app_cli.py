@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 import sys
+from uuid import uuid4
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
@@ -10,7 +11,19 @@ if str(PROJECT_ROOT) not in sys.path:
 from src.rag_graph import SupportAssistant
 
 
+def _is_venv_python() -> bool:
+    return getattr(sys, "base_prefix", sys.prefix) != sys.prefix
+
+
+def _print_env_hint() -> None:
+    if _is_venv_python():
+        return
+    print("[warning] You are using system Python.")
+    print("[warning] For reliable runs, use: .\\.venv\\Scripts\\python.exe -m src.app_cli\n")
+
+
 def main() -> None:
+    _print_env_hint()
     print("Customer Support Assistant (RAG + LangGraph + HITL)")
     print("Type 'exit' to quit.\n")
 
@@ -24,7 +37,7 @@ def main() -> None:
         if not query:
             continue
 
-        result = assistant.ask_with_hitl(query=query, thread_id="cli-thread")
+        result = assistant.ask_with_hitl(query=query, thread_id=f"cli-{uuid4().hex}")
         print("\nAssistant:", result["answer"])
         print(f"Confidence: {result['confidence']:.2f}")
         print(f"Escalated: {result['escalated_to_human']}")
